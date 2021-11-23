@@ -8,6 +8,9 @@ data = pd.read_csv(url)
 data[(data.Estado == 'Fallecido')].shape[0]
 
 # Número de Municipios Afectados
+data['Nombre municipio']
+
+# Liste los municipios afectados (sin repetirlos)
 data['Nombre municipio'].value_counts()
 
 
