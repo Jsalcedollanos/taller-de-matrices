@@ -19,3 +19,7 @@ Casa = (data['Ubicación del caso'] == 'Casa')
 # Número de personas que se encuentran recuperados
 data[(data.Recuperado == 'Recuperado')].shape[0]
 
+# Número de personas que ha fallecido
+data.Recuperado.replace('fallecido','Fallecido', inplace=True)
+data[(data.Recuperado == 'Fallecido')].shape[0]
+
