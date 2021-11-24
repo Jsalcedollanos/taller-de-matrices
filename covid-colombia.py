@@ -13,4 +13,7 @@ data['Nombre municipio']
 # Liste los municipios afectados (sin repetirlos)
 data['Nombre municipio'].value_counts()
 
+# Número de personas que se encuentran en atención en casa
+Casa = (data['Ubicación del caso'] == 'Casa')
+
 
