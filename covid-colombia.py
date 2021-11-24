@@ -32,4 +32,9 @@ data['Tipo de contagio'].value_counts()
 # =============================================================================
 # Número de departamentos afectados
 # =============================================================================
+data['Nombre departamento']
+
+# =============================================================================
+# Liste los departamentos afectados(sin repetirlos)
+# =============================================================================
 data['Nombre departamento'].value_counts()
