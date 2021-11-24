@@ -7,34 +7,45 @@ data = pd.read_csv(url)
 #1 Número de casos de Contagiados en el País.
 data[(data.Estado == 'Fallecido')].shape[0]
 
-# Número de Municipios Afectados
+#2 Número de Municipios Afectados
 data['Nombre municipio']
 
-# Liste los municipios afectados (sin repetirlos)
+#3 Liste los municipios afectados (sin repetirlos)
 data['Nombre municipio'].value_counts()
 
-# Número de personas que se encuentran en atención en casa
+#4 Número de personas que se encuentran en atención en casa
 Casa = (data['Ubicación del caso'] == 'Casa')
 
-# Número de personas que se encuentran recuperados
+#5 Número de personas que se encuentran recuperados
 data[(data.Recuperado == 'Recuperado')].shape[0]
 
-# Número de personas que ha fallecido
+#6 Número de personas que ha fallecido
 data.Recuperado.replace('fallecido','Fallecido', inplace=True)
 data[(data.Recuperado == 'Fallecido')].shape[0]
 
 # =============================================================================
-# Ordenar de Mayor a menor por tipo de caso (Importado, en estudio,
+#7 Ordenar de Mayor a menor por tipo de caso (Importado, en estudio,
 # Relacionado)
 # =============================================================================
 data['Tipo de contagio'].value_counts()
 
 # =============================================================================
-# Número de departamentos afectados
+#8 Número de departamentos afectados
 # =============================================================================
 data['Nombre departamento']
 
 # =============================================================================
-# Liste los departamentos afectados(sin repetirlos)
+#9 Liste los departamentos afectados(sin repetirlos)
 # =============================================================================
 data['Nombre departamento'].value_counts()
+
+# =============================================================================
+#10 Ordene de mayor a menor por tipo de atención
+# =============================================================================
+data['Recuperado'].value_counts()
+
+# =============================================================================
+# 11 Liste de mayor a menor los 10 departamentos con mas casos de
+# contagiados
+# =============================================================================
+data['Nombre departamento'].value_counts().head(10)
