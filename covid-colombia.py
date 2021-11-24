@@ -23,3 +23,9 @@ data[(data.Recuperado == 'Recuperado')].shape[0]
 data.Recuperado.replace('fallecido','Fallecido', inplace=True)
 data[(data.Recuperado == 'Fallecido')].shape[0]
 
+# =============================================================================
+# Ordenar de Mayor a menor por tipo de caso (Importado, en estudio,
+# Relacionado)
+# =============================================================================
+data['Tipo de contagio'].value_counts()
+
