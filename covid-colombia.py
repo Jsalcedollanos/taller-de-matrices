@@ -29,3 +29,7 @@ data[(data.Recuperado == 'Fallecido')].shape[0]
 # =============================================================================
 data['Tipo de contagio'].value_counts()
 
+# =============================================================================
+# Número de departamentos afectados
+# =============================================================================
+data['Nombre departamento'].value_counts()
