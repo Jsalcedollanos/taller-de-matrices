@@ -95,7 +95,7 @@ agrupados.groupby(['Nombre departamento','Nombre municipio','Recuperado']).size(
 # 18. Número de Mujeres y hombres contagiados por ciudad por 
 # departamento
 # =============================================================================
-data.groupby(['Sexo','Nombre departamento','Nombre municipio','Estado']).size().sort_values(ascending=False).head(60)
+data.groupby(['Sexo','Nombre departamento','Nombre municipio','Estado']).size().sort_values(ascending=False)
 
 # =============================================================================
 # 19. Liste el promedio de edad de contagiados por hombre y mujeres por 
@@ -107,5 +107,11 @@ promedio.groupby(['Nombre departamento','Nombre municipio','Sexo','Unidad de med
 # =============================================================================
 # 20. Liste de mayor a menor el número de contagiados por país de 
 # procedencia
+# =============================================================================
+data['Nombre del país'].value_counts()
+
+# =============================================================================
+# 21. Liste de mayor a menor las fechas donde se presentaron mas 
+# contagios
 # =============================================================================
 data['Nombre del país'].value_counts()
