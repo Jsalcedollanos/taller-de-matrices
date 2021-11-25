@@ -96,3 +96,10 @@ agrupados.groupby(['Nombre departamento','Nombre municipio','Recuperado']).size(
 # departamento
 # =============================================================================
 data.groupby(['Sexo','Nombre departamento','Nombre municipio','Estado']).size().sort_values(ascending=False).head(60)
+
+# =============================================================================
+# 19. Liste el promedio de edad de contagiados por hombre y mujeres por 
+# ciudad por departamento
+# =============================================================================
+promedio = data[(data['Sexo'] == 'M')]
+promedio.groupby(['Nombre departamento','Nombre municipio','Sexo','Unidad de medida de edad']).size().sort_values(ascending=False).head(60)
