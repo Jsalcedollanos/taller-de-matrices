@@ -103,3 +103,9 @@ data.groupby(['Sexo','Nombre departamento','Nombre municipio','Estado']).size().
 # =============================================================================
 promedio = data[(data['Sexo'] == 'M')]
 promedio.groupby(['Nombre departamento','Nombre municipio','Sexo','Unidad de medida de edad']).size().sort_values(ascending=False).head(60)
+
+# =============================================================================
+# 20. Liste de mayor a menor el número de contagiados por país de 
+# procedencia
+# =============================================================================
+data['Nombre del país'].value_counts()
