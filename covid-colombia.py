@@ -49,3 +49,12 @@ data['Recuperado'].value_counts()
 # contagiados
 # =============================================================================
 data['Nombre departamento'].value_counts().head(10)
+
+# =============================================================================
+# 12 Liste de mayor a menor los 10 departamentos con mas casos de
+# fallecidos
+# =============================================================================
+# departamentos = data[(data['Nombre departamento']) & (data.Estado == 'Fallecido')]
+
+fallecidos = data[(data['Recuperado'] == 'Fallecido')]
+fallecidos.groupby(['Nombre departamento','Recuperado']).size().head(10).sort_values(ascending=False)
