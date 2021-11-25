@@ -90,3 +90,9 @@ recuperados.groupby(['Nombre municipio','Recuperado']).size().head(10).sort_valu
 # =============================================================================
 agrupados = data[(data['Recuperado'] == 'Recuperado')]
 agrupados.groupby(['Nombre departamento','Nombre municipio','Recuperado']).size().sort_values(ascending=False)
+
+# =============================================================================
+# 18. Número de Mujeres y hombres contagiados por ciudad por 
+# departamento
+# =============================================================================
+data.groupby(['Sexo','Nombre departamento','Nombre municipio','Estado']).size().sort_values(ascending=False).head(60)
