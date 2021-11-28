@@ -114,4 +114,11 @@ data['Nombre del país'].value_counts()
 # 21. Liste de mayor a menor las fechas donde se presentaron mas 
 # contagios
 # =============================================================================
-data['Nombre del país'].value_counts()
+data['Fecha de inicio de síntomas'].value_counts()
+
+# =============================================================================
+# 27. Grafique las curvas de contagio, muerte y recuperación de toda
+# Colombia acumulados
+# =============================================================================
+data.Estado.value_counts().plot.bar()
+
