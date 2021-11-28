@@ -122,3 +122,8 @@ data['Fecha de inicio de síntomas'].value_counts()
 # =============================================================================
 data.Estado.value_counts().plot.bar()
 
+# =============================================================================
+# 28. Grafique las curvas de contagio, muerte y recuperación de los 10 
+# departamentos con mas casos de contagiados acumulados
+# =============================================================================
+data['Nombre departamento'].value_counts().head(10).plot.bar()
