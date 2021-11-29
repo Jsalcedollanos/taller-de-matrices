@@ -162,3 +162,15 @@ data.groupby(['Estado','Fecha de inicio de síntomas']).size().value_counts().pl
 # departamento
 # =============================================================================
 data.groupby(['Estado','Nombre departamento']).size()
+
+# =============================================================================
+# 24. Liste la tasa de mortalidad y recuperación que tiene cada ciudad
+# =============================================================================
+data.groupby(['Estado','Nombre municipio']).size()
+
+
+# =============================================================================
+# 30. Liste de mayor a menor la cantidad de fallecidos por edad en toda 
+# Colombia.
+# =============================================================================
+data.groupby(['Edad','Estado']).size()
