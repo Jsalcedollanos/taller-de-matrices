@@ -141,4 +141,7 @@ data['Nombre municipio'].value_counts().head(10).plot.bar()
 col = data[(data.Estado == 'Fallecido')]
 col.groupby(['Edad','Nombre del país']).size()
 
-
+# =============================================================================
+# 33. Haga un gráfico de barras por Sexo de toda Colombia
+# =============================================================================
+data.Sexo.value_counts().plot.bar()
