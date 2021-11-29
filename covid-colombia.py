@@ -150,3 +150,9 @@ data.Sexo.value_counts().plot.bar()
 # 34. Haga un gráfico de barras por tipo de toda Colombia
 # =============================================================================
 data['Tipo de recuperación'].value_counts().plot.bar()
+
+# =============================================================================
+# 35. Haga un gráfico de barras del número de contagiados, recuperados y 
+# fallecidos por fecha de toda Colombia
+# =============================================================================
+data.groupby(['Estado','Fecha de inicio de síntomas']).size().value_counts().plot.bar()
