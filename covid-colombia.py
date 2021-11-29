@@ -156,3 +156,9 @@ data['Tipo de recuperación'].value_counts().plot.bar()
 # fallecidos por fecha de toda Colombia
 # =============================================================================
 data.groupby(['Estado','Fecha de inicio de síntomas']).size().value_counts().plot.bar()
+
+# =============================================================================
+# 23. Liste la tasa de mortalidad y recuperación que tiene cada 
+# departamento
+# =============================================================================
+data.groupby(['Estado','Nombre departamento']).size()
